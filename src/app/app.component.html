@@ -11,6 +11,11 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="mat-form-simples">
+      <mat-label>Sobrenome</mat-label>
+      <input matInput [(ngModel)]="usuario.sobrenome" placeholder="digite o sobrenome">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="mat-form-simples">
       <mat-label>CPF</mat-label>
       <input matInput [(ngModel)]="usuario.cpf" placeholder="digite o cpf">
     </mat-form-field>
@@ -33,10 +38,10 @@
   <mat-card-header>
     <mat-card-title>
       <mat-icon>person</mat-icon>
-      {{usuario.nome}}</mat-card-title>
+      {{usuario.nome}} {{usuario.sobrenome}}</mat-card-title>
     <mat-card-subtitle *ngIf="usuario.cpf">CPF: {{usuario.cpf}} Idade: {{usuario.idade}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    Blablabla blaBlablabla blaBlablabla blaBlablabla blaBlablabla blaBlablabla blaBlablabla bla
+    Olá, {{usuario.nome}} {{usuario.sobrenome}}. Seu cadastro foi realizado com sucesso!
   </mat-card-content>
 </mat-card>
