@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
+import { LayoutModule } from './layout/layout.module';
 
 
 
@@ -28,7 +29,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
