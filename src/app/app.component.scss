@@ -1,15 +1,106 @@
-.mat-card-simples{
-  max-width: 300px;
-  background-color: aliceblue;
-  margin-top: 10px;
+// Define as cores utilizadas no layout
+$primary-color: #2c3e50;
+$secondary-color: #2c3e50;
+$card-bg-color: #f5f5f5;
+
+// Define o estilo para o componente de menu
+app-menu {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 5px;
+  height: 60px;
+  background-color: $primary-color;
+  color: white;
+  font-size: 24px;
 }
 
-.card-insercao-usuario{
-  max-width: 650px;
-  background-color: azure;
-  margin-top: 10px;
+// Define o estilo para o formulário de inserção de usuários
+.card-insercao-usuario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 200px;
+  background-color: $card-bg-color;
+
+  // Define o estilo para o título do formulário
+  .mat-card-title {
+    font-size: 24px;
+    color: $primary-color;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  // Define o estilo para as labels do formulário
+  .mat-form-field-label {    
+    color: $primary-color;
+    font-weight: bold;
+  }
+
+  // Define o estilo para os inputs do formulário
+  .mat-form-field-infix {    
+    border-radius: 5px;
+    border-color: $secondary-color;
+    border-width: 2px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    &:focus {
+      border-color: $secondary-color;
+      box-shadow: none;
+    }
+  }
+
+  // Define o estilo para o botão de adicionar usuário
+  .mat-card-footer {
+    background-color: $card-bg-color;
+
+    button {
+      background-color: $secondary-color;
+      color: white;
+      font-size: 18px;
+      border-radius: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
 }
 
-.mat-form-simples {
-  margin-left:5px;
+// Define o estilo para a lista de usuários
+.mat-card-simples {
+  margin: 20px;
+  width: 400px;
+  background-color: $card-bg-color;
+
+  // Define o estilo para o título da lista de usuários
+  .mat-card-title {
+    color: $primary-color;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    mat-icon {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  }
+
+  // Define o estilo para o subtitulo da lista de usuários
+  .mat-card-subtitle {
+    color: $primary-color;
+    font-weight: bold;
+  }
+
+  // Define o estilo para o conteúdo da lista de usuários
+  .mat-card-content {
+    font-size: 16px;
+    color: $primary-color;
+    padding: 10px;
+  }
 }
